@@ -11,21 +11,22 @@ CREATE TABLE plataformas (
     nome NVARCHAR(100) NOT NULL,
     marca NVARCHAR(100) NOT NULL,
     ano_lancamento INT NULL,
-    imagem_url VARCHAR(500) NULL
+    img_dispositivo VARCHAR(MAX) NULL,
+    img_logo VARCHAR(MAX) NULL
 );
 
 -- depende de plataformas
 CREATE TABLE jogos (
     id INT IDENTITY(1,1) PRIMARY KEY,
     nome NVARCHAR(150) NOT NULL,
-    plataforma_id INT NOT NULL,
-    cover_url VARCHAR(500) NULL,
-    logo_url VARCHAR(500) NULL,
-    wallpaper_url VARCHAR(500) NULL,
-    start_screen_url VARCHAR(500) NULL,
+    id_plataforma INT NOT NULL,
+    img_cover VARCHAR(MAX) NULL,
+    img_logo VARCHAR(MAX) NULL,
+    img_wallpaper VARCHAR(MAX) NULL,
+    img_start_screen VARCHAR(MAX) NULL,
     
     -- definição da Chave Estrangeira
-    CONSTRAINT FK_Jogos_Plataformas FOREIGN KEY (plataforma_id) 
+    CONSTRAINT FK_Jogos_Plataformas FOREIGN KEY (id_plataforma) 
         REFERENCES plataformas(id)
         -- ON DELETE CASCADE -- os jogos são apagados caso a plataforma seja excluída
 );
