@@ -1,0 +1,36 @@
+# Dependências do Node (Back-end e Front-end)
+node_modules/
+/.pnp
+.pnp.js
+
+# Variáveis de Ambiente e Credenciais (MUITO IMPORTANTE!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de Build/Compilação (TypeScript/React/Next/etc)
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# Arquivos de Uploads/Mídias Locais (imagens dos jogos e plataformas)
+/uploads/
+/public/uploads/
+
+# Logs de Erro e Execução
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Configurações do VS Code/IDE
+.vscode/
+.idea/
